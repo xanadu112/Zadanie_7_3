@@ -44,8 +44,8 @@ def create_contacts(type_b_c, amount_b_c):
             b_c.append(BusinessContact(name=fake.first_name(), surname=fake.last_name(), telephone=fake.phone_number(), work_phone=fake.phone_number(), company=fake.company(), position=fake.job(), email=fake.ascii_company_email()))
     return b_c
 
+if __name__ == "__main__":
+    persona = create_contacts(BusinessContact, 3)
 
-persona = create_contacts(BusinessContact, 3)
-
-for k in range(len(persona)):
-    print(persona[k])
+    for person in persona:
+        print(person)
