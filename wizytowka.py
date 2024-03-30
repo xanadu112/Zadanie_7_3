@@ -49,3 +49,4 @@ if __name__ == "__main__":
 
     for person in persona:
         print(person)
+
