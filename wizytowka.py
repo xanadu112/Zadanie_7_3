@@ -36,11 +36,10 @@ class BusinessContact(BaseContact):
 
 def create_contacts(type_b_c, amount_b_c):
     b_c = []
-    if type_b_c == BaseContact:
-        for i in range(amount_b_c):
+    for i in range(amount_b_c):
+        if type_b_c == BaseContact:
             b_c.append(BaseContact(name=fake.first_name(), surname=fake.last_name(), telephone=fake.phone_number(), email=fake.ascii_email()))
-    else:
-        for i in range(amount_b_c):
+        else:
             b_c.append(BusinessContact(name=fake.first_name(), surname=fake.last_name(), telephone=fake.phone_number(), work_phone=fake.phone_number(), company=fake.company(), position=fake.job(), email=fake.ascii_company_email()))
     return b_c
 
